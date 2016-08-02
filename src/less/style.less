@@ -1,0 +1,107 @@
+body{
+  margin:0;
+  padding:0;
+}
+*{
+  font:16px/1.5em Arial,sans-serif;
+}
+#wrapper{
+  max-width:1200px;
+  margin:50px auto;
+  font-size: 0;
+}
+#search{
+  position: relative;
+  max-width:800px;
+  margin:50px auto;
+  &:before{
+    position: absolute;
+    content: "Для сброса введите пустой запрос";
+    top: -32px;
+    font-size: 13px;
+    left: 10px;
+    color: rgb(119, 119, 119);
+  }
+}
+.search_line{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.3);
+  height: 50px;
+  padding: 10px 5px 10px 50px;
+  outline: none;
+  box-sizing:border-box;
+  &:hover{
+    border: 1px solid rgba(0,0,0,.6);
+  }
+}
+.search_button{
+  position: absolute;
+  width:50px;
+  height: 50px;
+  top:0;
+  right:0;
+  background: #02a8f3;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  border: none;
+  outline: none;
+  cursor:pointer;
+}
+.block{
+  display:inline-block;
+  width:25%;
+  height: 500px;
+  font-size:16px;
+  padding: 20px 30px;
+  box-sizing:border-box;
+}
+.close{
+  display:none;
+}
+.title{
+  font-weight:bold;
+  font-size:18px;
+}
+.photo{
+  width:100%;
+}
+.star{
+  width:15px;
+}
+.votes{
+  font-size:14px;
+  margin-top:10px;
+  &:after{
+    content: "Проголосовало";
+    margin-left:20px;
+  }
+}
+.genre{
+  margin-top:10px;
+}
+.genreItem{
+  display:inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #949494;
+}
+@media screen and (max-width:1000px){
+  .block{
+    width: 33%;
+  }
+}
+@media handheld, screen and (max-width:800px){
+  .block{
+    width: 50%;
+  }
+}
+@media handheld, screen and (max-width:500px){
+  .block{
+    width: 100%;
+    margin-top:50px;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+}
